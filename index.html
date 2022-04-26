@@ -9,50 +9,82 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/CS/style.css">
+    <script src="https://kit.fontawesome.com/3468ae9667.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <div class="container-fluid justify-items-center ">
-        <div class="row">
-            <div class="col-12 text-center py-4 h2 weatherAppNav text-white">
-                Weather App
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Please verify the city:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row h-100">
+        <div class="row">
             <div class="col-4">
                 <div class="container asideSearch justify-content-center">
-                    <div class="row w-100 border-bottom">
-                        <p>Search</p>
-                        <p>Search</p>
-                        <p>Search</p>
-                        <p>Search</p>
+                    <div class="row w-100 h-25 border-bottom pb-3 mb-3">
+                        <p class="h2 pb-3 mb-3">Input City Name:</p>
+                        <div class="input-group pb-3 mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">City:</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Default" id="citySearch"
+                                aria-describedby="inputGroup-sizing-default" value="Milwaukee">
+                        </div>
+                        <Button class="btn btn-primary my-2 fs-4" data-bs-toggle="modal" data-bs-target="#myModal" onclick="geocode()">Submit</Button>
                     </div>
                     <div class="row w-100">
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
-                        <p>History</p>
+                        <div class="btn btn-secondary my-2 fs-4">Austin</div>
+                        <div class="btn btn-secondary my-2 fs-4">Chicago</div>
+                        <div class="btn btn-secondary my-2 fs-4">New York</div>
+                        <div class="btn btn-secondary my-2 fs-4">Orlando</div>
+                        <div class="btn btn-secondary my-2 fs-4">San Francisco</div>
+                        <div class="btn btn-secondary my-2 fs-4">Seattle</div>
+                        <div class="btn btn-secondary my-2 fs-4">Denver</div>
+                        <div class="btn btn-secondary my-2 fs-4">Atlanta</div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-8 text-center border">
-                <div class="row w-100 border-bottom">
-                    <p>City (Date)</p>
-                    <p>Temperature</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                    <p>UV Index</p>
+            <div class="col-8 text-center border mt-3">
+                <div class="row w-100 border-bottom my-3">
+                    <p id="mCity">City (Date)</p>
+                    <p id="mTemp">Temperature</p>
+                    <p id="mWind">Wind</p>
+                    <p id="mHum">Humidity</p>
+                    <p id="mUV">UV Index</p>
                 </div>
-                <div class="row row-cols-5 w-100">
-                    <div class="col">Column</div>
+                <div class="row">
+                    <div class="h2 my-3">5-Day Forecast</div>
+                </div>
+                <div class="row row-cols-5 w-100 px-4">
+
+
+                    <div class="col">Column
+                        <div class="row">Date</div>
+                        <div class="row">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <div class="row">Temp:</div>
+                        <div class="row">Wind:</div>
+                        <div class="row">Humidity:</div>
+
+                    </div>
+
+
                     <div class="col">Column</div>
                     <div class="col">Column</div>
                     <div class="col">Column</div>
@@ -62,10 +94,14 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./assets/JS/script.js"></script>
 </body>
 
 </html>
+
+
+<!-- <i class="fa-solid fa-bolt-lightning"></i>
+<i class="fa-solid fa-cloud"></i>
+<i class="fa-solid fa-sun"></i>
+<i class="fa-solid fa-wind"></i> -->
