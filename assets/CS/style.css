@@ -5,3 +5,31 @@
 /* .asideSearch {
     min-height: 100vw;
 } */
+
+.banner {
+    display: flex;
+    min-height: 10vh;
+    justify-content: center;
+    padding-left: 5em;
+    font-size: 27px;
+    background-color:lightsteelblue;
+    align-content: center;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.h-40{
+    height: 40%;
+}
+
+#mUV {
+    max-width: 30px !important;
+}
