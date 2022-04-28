@@ -31,5 +31,11 @@
 }
 
 #mUV {
-    max-width: 30px !important;
+    max-width: 70px !important;
+}
+
+.forecastCard {
+    background-color: darkslategray;
+    margin: 0 1px;
+    max-width: 220px !important; 
 }
