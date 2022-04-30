@@ -9,7 +9,7 @@ var savedData = [];
 
 function geocode() {
   cityName = document.getElementById("citySearch").value;
-  let openWeatherApi = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=95353ec9c8fa3b0e90a8e0ba6a8eacd5`;
+  let openWeatherApi = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=95353ec9c8fa3b0e90a8e0ba6a8eacd5`;
 
   fetch(openWeatherApi).then(function (response) {
     if (response.status === 200) {
