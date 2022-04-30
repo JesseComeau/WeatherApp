@@ -301,7 +301,6 @@ function initializeWeather() {
 pageLoad()
 initializeWeather()
 function updateLocalStorage(city) {
-  console.log(city)
   if (city.name != savedData[0].name) {
     let addData = {
       name: city.name,
@@ -311,7 +310,6 @@ function updateLocalStorage(city) {
     }
     savedData.unshift(addData);
     savedData.pop();
-    console.log(savedData)
     localStorage.setItem('weatherApp', JSON.stringify(savedData))
   }
   pageLoad();
